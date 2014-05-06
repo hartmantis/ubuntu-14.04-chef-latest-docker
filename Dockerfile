@@ -14,11 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM jayofdoom/docker-ubuntu-14.04
+FROM roboticcheese/ubuntu:14.04
 MAINTAINER Jonathan Hartman "j@p4nt5.com"
 
-RUN apt-get -y update
-RUN wget https://www.opscode.com/chef/install.sh
-RUN chmod +x install.sh
-RUN ./install.sh
-RUN rm install.sh
+RUN curl -L https://www.opscode.com/chef/install.sh | bash
